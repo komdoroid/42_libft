@@ -1,35 +1,57 @@
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_itoa(int num)
+static	int	ft_nbrlen(long nb)
 {
-	long	nb;
-	long	nb_cpy;
 	int	len;
-	int	min;
 
 	len = 0;
-	min = 0
-	nb = (long)num;
-	if (num == 0)
-		return ("0");
-	if (nb < 0)
-		min = 1;
-	nb_cpy = nb;
-	while (nb_cpy != 0)
+	if (nb <= 0)
 	{
-		nb_cpy = nb_cpy / 10;
+		len++;
+		nb = -nb;
+	}
+	while (nb > 0)
+	{
+		nb /= 10;
 		len++;
 	}
-	p = (char *)malloc(sizeof(char) * (len + 1));
-	while (nb != 0)
+	return (len);
+}
+
+static void	ft_fillnbr(char *res, long nb, int len)
+{
+	res[len] = '\0';
+	if (nb == 0)
+		res[0] = '0';
+	if (nb < 0)
 	{
-		p[len] = nb % 10 + '0';
-		nb = nb / 10;
+		res[0] = '-';
+		nb = -nb;
+	}
+	while (nb > 0)
+	{
+		res[len - 1] = (nb % 10) + '0';
+		nb /= 10;
 		len--;
 	}
 }
 
+char	*ft_itoa(int num)
+{
+	long	nb;
+	int	len;
+	char	*res;
+
+	nb = (long)num;
+	len = ft_nbrlen(nb);
+	res = (char *)malloc(sizeof(char) * (len + 1));
+	if (res == NULL)
+		return (NULL);
+	ft_fillnbr(res, nb, len);
+	return (res);
+}
+
+#include <stdio.h>
 
 int	main(void)
 {
