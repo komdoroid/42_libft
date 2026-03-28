@@ -27,7 +27,7 @@ size_t	ft_strlen(const char *str);
 int	ft_strncmp(char *str1, char *str2, int size);
 char *strnstr(char *big, char *little, int len);
 char	*ft_strrchr(char *str, int c);
-char *ft_strdup(char *s);
+char *ft_strdup(const char *s);
 
 // mem
 void	*ft_memset(void *s, int c, size_t n);
@@ -40,5 +40,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 // libft func
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif

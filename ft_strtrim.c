@@ -26,17 +26,17 @@ static size_t	get_head(char const *s1, char const *set)
 	return (head);
 }
 
-static size_t	get_tail(char const *s1, char const *set)
+static int	get_tail(char const *s1, char const *set)
 {
 	size_t	s1len;
 	size_t	setlen;
-	size_t	tail;
+	int	tail;
 	size_t	i;
 
 	s1len = ft_strlen(s1);
 	setlen = ft_strlen(set);
-	tail = s1len - 1;
-	while (tail > 0)
+	tail = (int)s1len - 1;
+	while (tail >= 0)
 	{
 		i = 0;
 		while (i < setlen)
@@ -56,7 +56,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
 	size_t	head;
-	size_t	tail;
+	int	tail;
 	size_t	i;
 
 	if (s1 == NULL)
@@ -65,8 +65,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(s1));
 	head = get_head(s1, set);
 	tail = get_tail(s1, set);
-	if (head > tail)
-		return (ft_strdup(s1));
+	if (tail < 0 || head > (size_t)tail)
+		return (ft_strdup(""));
 	trim = (char *)malloc(sizeof(char) * ((tail - head  + 1) + 1));
 	if (trim == NULL)
 		return (NULL);
