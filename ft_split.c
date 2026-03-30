@@ -21,43 +21,72 @@ static size_t	count_words(char const *s, char c)
 	return (count);
 }
 
+static void	free_split(char **res, size_t count)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(res[i]);
+		i++;
+	}
+	free(res);
+}
+
+static char	*make_word(char const *s, size_t start, char c)
+{
+	char	*word;
+	size_t	len;
+	size_t	i;
+
+	len = 0;
+	while (s[start + len] != '\0' && s[start + len] != c)
+		len++;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (word == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		word[i] = s[start + i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
-	size_t	i;
-	size_t	j;
-	size_t	words;
-	size_t	count;
+	char	**res;
 
 	if (s == NULL)
 		return (NULL);
 	words = count_words(s, c);
-	ptr = (char **)malloc(sizeof(char *) * (words + 1));
-	if (ptr == NULL)
+	res = (char **)malloc(sizeof(char *) * (words + 1));
+	if (res == NULL)
 		return (NULL);
 	i = 0;
-	count = 0;
-	while (s[i] != '\0' && s[i] != '\0')
+	j = 0;
+	while (s[i] != '\0')
 	{
-		while (s[i] == c)
+		while (s[i] == c && s[i] != '\0')
 			i++;
 		if (s[i] != '\0')
 		{
-			j = 0;
-			while (s[i + j] != c && s[i + j] != '\0')
-				j++;
-			ptr[count] = (char *)malloc(sizeof(char) * (j + 1));
-			if (ptr[count] == NULL)
+			res[j] = make_word(s, i, c);
+			if (res[j] == NULL)
+			{
+				free_split(res, j);
 				return (NULL);
-			ft_memcpy(ptr[count], &s[i], j);
-			ptr[count][j] = '\0';
-			i += j;
-			count++;
+			}
+			j++;
+			while (s[i] != c && s[i] != '\0')
+				i++;
 		}
-		i++;
 	}
-	ptr[words] = NULL;
-	return (ptr);
+	res[j] = NULL;
+	return (res);
 }
 
 int	main(void)
