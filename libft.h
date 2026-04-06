@@ -4,6 +4,12 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+typedef struct	s_list
+{
+	void	*content;
+	struct s_list	*next:
+}	t_list
+
 // stdlib
 int	ft_atoi(char *str);
 char	*ft_itoa(int num);
