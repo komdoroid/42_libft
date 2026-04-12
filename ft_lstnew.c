@@ -12,16 +12,18 @@ t_list	*ft_lstnew(void *content)
 	return (res);
 }
 
-int	main(void)
-{
-	char	content[] = "42 Tokyo";
-	t_list	*res;
-
-	res = ft_lstnew(content);
-	printf("content: %s\n", (char *)res->content);
-
-	printf("node address: %p\n", (void *)res);
-	printf("content address: %p\n", res->content);
-
-	free(res);
-}
+// #include <stdio.h>
+// 
+// int	main(void)
+// {
+// 	char	content[] = "42 Tokyo";
+// 	t_list	*res;
+// 
+// 	res = ft_lstnew(content);
+// 	printf("content: %s\n", (char *)res->content);
+// 
+// 	printf("node address: %p\n", (void *)res);
+// 	printf("content address: %p\n", res->content);
+// 
+// 	free(res);
+// }
