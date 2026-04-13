@@ -11,6 +11,16 @@ t_list	*ft_lstlast(t_list *lst)
 
 #include <stdio.h>
 
+void	print_list(t_list *lst)
+{
+	while (lst != NULL)
+	{
+		printf("%s -> ", (char *)lst->content);
+		lst = lst->next;
+	}
+	printf("\n");
+}
+
 int	main(void)
 {
 	t_list	*head;
@@ -24,7 +34,8 @@ int	main(void)
 	ft_lstadd_front(&head, node3);
 
 	t_list	*res = ft_lstlast(head);
-	printf("res->content: %s\n", res->content);
+	print_list(head);
+	printf("res->content: %s\n", (char *)res->content);
 	
 	return (0);
 }
