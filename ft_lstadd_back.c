@@ -17,34 +17,34 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	tail->next = new;
 }
 
-#include <stdio.h>
-
-void	print_list(t_list *lst)
-{
-	if (!lst)
-		return ;
-	while (lst)
-	{
-		printf("%s -> ", (char *)lst->content);
-		lst = lst->next;
-	}
-	printf("NULL\n");
-}
-
-int	main(void)
-{
-	t_list	*head;
-
-	head = NULL;
-	t_list	*node1 = ft_lstnew("A");
-	t_list	*node2 = ft_lstnew("B");
-	t_list	*node3 = ft_lstnew("C");
-
-	ft_lstadd_back(&head, node1);
-	ft_lstadd_back(&head, node2);
-	ft_lstadd_back(&head, node3);
-
-	print_list(head);
-
-	return(0);
-}
+// #include <stdio.h>
+// 
+// void	print_list(t_list *lst)
+// {
+// 	if (!lst)
+// 		return ;
+// 	while (lst)
+// 	{
+// 		printf("%s -> ", (char *)lst->content);
+// 		lst = lst->next;
+// 	}
+// 	printf("NULL\n");
+// }
+// 
+// int	main(void)
+// {
+// 	t_list	*head;
+// 
+// 	head = NULL;
+// 	t_list	*node1 = ft_lstnew("A");
+// 	t_list	*node2 = ft_lstnew("B");
+// 	t_list	*node3 = ft_lstnew("C");
+// 
+// 	ft_lstadd_back(&head, node1);
+// 	ft_lstadd_back(&head, node2);
+// 	ft_lstadd_back(&head, node3);
+// 
+// 	print_list(head);
+// 
+// 	return(0);
+// }
