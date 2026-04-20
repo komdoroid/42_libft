@@ -14,7 +14,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		node = (t_list *)malloc(sizeof(t_list));
 		if (node == NULL)
 		{
-			ft_lstclaer(&head, del);
+			ft_lstclear(&head, del);
 			return (NULL);
 		}
 		content = f(lst->content);
