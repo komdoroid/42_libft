@@ -15,21 +15,21 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (ptr);
 }
 
-#include <stdio.h>
-
-int	main(void)
-{
-	size_t	nmemb = 10;
-	size_t	size = 4;
-	size_t	i = 0;
-	void	*res;
-	unsigned char	*p;
-
-	res = ft_calloc(nmemb, size);
-	p = (unsigned char *)res;
-	while (i < nmemb * size)
-	{
-		printf("%d\n", p[i]);
-		i++;
-	}
-}
+// #include <stdio.h>
+// 
+// int	main(void)
+// {
+// 	size_t	nmemb = 10;
+// 	size_t	size = 4;
+// 	size_t	i = 0;
+// 	void	*res;
+// 	unsigned char	*p;
+// 
+// 	res = ft_calloc(nmemb, size);
+// 	p = (unsigned char *)res;
+// 	while (i < nmemb * size)
+// 	{
+// 		printf("%d\n", p[i]);
+// 		i++;
+// 	}
+// }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/23 22:27:36 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/23 22:39:24 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -19,7 +31,7 @@ void	ft_bzero(void *s, size_t n)
 // 
 // int	main(void)
 // {
-// 	char	str[] = "Im feeling good...";
+// 	char	str[] = "Blue Giant";
 // 	int	i = 0;
 // 
 // 	ft_bzero(str, 5);

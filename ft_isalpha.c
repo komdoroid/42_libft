@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/23 21:30:01 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/23 22:29:53 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
 	if ('A' <= c && c <= 'Z')
@@ -6,3 +20,16 @@ int	ft_isalpha(int c)
 		return (c);
 	return (0);
 }
+
+// #include <ctype.h>
+// #include <stdio.h>
+// 
+// int	main(void)
+// {
+// 	int	c;
+// 
+// 	c =ft_isalpha('1');
+// 	printf("ft_isalpha result: %d\n", c);
+// 	c = isalpha('1');
+// 	printf("isalpha result = %d\n", c);
+// }
