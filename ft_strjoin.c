@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 22:45:47 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/24 22:45:51 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/25 12:41:05 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (strjoin);
 }
 
-int	main(void)
-{
-	char	s1[] = "marumaru";
-	char	s2[] = "morimori";
-	char	*res;
-
-	res = ft_strjoin(s1, s2);
-	while (*res != '\0')
-	{
-		write(1, res, 1);
-		res++;
-	}
-}
+// int	main(void)
+// {
+// 	char	s1[] = "marumaru";
+// 	char	s2[] = "morimori";
+// 	char	*res;
+// 
+// 	res = ft_strjoin(s1, s2);
+// 	while (*res != '\0')
+// 	{
+// 		write(1, res, 1);
+// 		res++;
+// 	}
+// }

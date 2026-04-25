@@ -11,7 +11,7 @@ typedef struct	s_list
 }	t_list;
 
 // stdlib
-int	ft_atoi(char *str);
+int	ft_atoi(const char *str);
 char	*ft_itoa(int num);
 void	*ft_calloc(size_t nmemb, size_t size);
 
@@ -21,7 +21,6 @@ int	ft_isalpha(int c);
 int	ft_isascii(int c);
 int	ft_isdigit(int c);
 int	ft_isprint(int c);
-int	ft_isspace(int c);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
 
@@ -30,9 +29,9 @@ char	*ft_strchr(const char *str, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
-int	ft_strncmp(char *str1, char *str2, int size);
-char *ft_strnstr(char *big, char *little, int len);
-char	*ft_strrchr(char *str, int c);
+int	ft_strncmp(const char *str1, const char *str2, size_t size);
+char *ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strrchr(const char *str, int c);
 char *ft_strdup(const char *s);
 
 // mem

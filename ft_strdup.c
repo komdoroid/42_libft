@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 11:29:19 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/25 11:48:45 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_strdup(const char *s)
@@ -22,7 +34,7 @@ char *ft_strdup(const char *s)
 // 
 // int	main(void)
 // {
-// 	char	*str = "Im feeling good";
+// 	char	*str = "42tokyo";
 // 	char	*res;
 // 
 // 	res = ft_strdup(str);

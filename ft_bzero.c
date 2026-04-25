@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 22:27:36 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/23 22:39:24 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/25 13:47:03 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_bzero(void *s, size_t n)
 // 
 // int	main(void)
 // {
-// 	char	str[] = "Blue Giant";
+// 	char	str[] = "Hello, 42tokyo";
 // 	int	i = 0;
 // 
 // 	ft_bzero(str, 5);

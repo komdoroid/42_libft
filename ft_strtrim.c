@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 12:41:40 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/25 14:28:12 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	get_head(char const *s1, char const *set)
@@ -30,12 +42,12 @@ static int	get_tail(char const *s1, char const *set)
 {
 	size_t	s1len;
 	size_t	setlen;
-	int	tail;
+	size_t	tail;
 	size_t	i;
 
 	s1len = ft_strlen(s1);
 	setlen = ft_strlen(set);
-	tail = (int)s1len - 1;
+	tail = s1len;
 	while (tail >= 0)
 	{
 		i = 0;
