@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 22:05:51 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/23 22:16:34 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/25 08:10:03 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_isprint(int c)
 {
 	if (c <= 31 || 127 <= c)
 		return (0);
-	return (c);
+	return (1);
 }
 
 

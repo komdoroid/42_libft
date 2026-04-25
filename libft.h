@@ -26,12 +26,12 @@ int	ft_tolower(int c);
 int	ft_toupper(int c);
 
 // str
-char	*ft_strchr(char *str, char c);
-int	ft_strlcat(char *dst, char *src, int size);
-int	ft_strlcpy(char *dst, char *src, int size);
+char	*ft_strchr(const char *str, int c);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
 int	ft_strncmp(char *str1, char *str2, int size);
-char *strnstr(char *big, char *little, int len);
+char *ft_strnstr(char *big, char *little, int len);
 char	*ft_strrchr(char *str, int c);
 char *ft_strdup(const char *s);
 

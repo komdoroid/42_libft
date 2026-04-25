@@ -1,30 +1,43 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 08:50:25 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/25 08:59:55 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char	*ft_strchr(char *str, char c)
+#include "libft.h"
+
+char	*ft_strchr(const char *str, int c)
 {
 	while (*str != '\0')
 	{
-		if (*str == c)
-			return (str);
+		if (*str == (char)c)
+			return ((char *)str);
 		str++;
 	}
 	if (*str == c)
-		return (str);
+		return ((char *)str);
 	return (NULL);
 }
 
-#include <unistd.h>
-
-int	main(void)
-{
-	char	*str = "Im saiyan";
-	char	*res;
-
-	res = ft_strchr(str, 'a');
-	while (*res != '\0')
-	{
-		write(1, res, 1);
-		res++;
-	}
-	write(1, "\n", 1);
-}
+// #include <unistd.h>
+// #include <string.h>
+// 
+// int	main(void)
+// {
+// 	char	*str = "42tokyo";
+// 	char	*res;
+// 
+// 	res = ft_strchr(str, 'o');
+// 	while (*res != '\0')
+// 	{
+// 		write(1, res, 1);
+// 		res++;
+// 	}
+// 	write(1, "\n", 1);
+// }

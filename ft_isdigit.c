@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 21:43:17 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/23 22:15:11 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/25 08:09:06 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isdigit(int c)
 {
 	if ('0' <= c && c <= '9')
-		return (c);
+		return (1);
 	return (0);
 }
 
