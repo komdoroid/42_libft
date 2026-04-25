@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 18:56:30 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/25 19:03:21 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	int	ft_nbrlen(long nb)
@@ -51,13 +63,13 @@ char	*ft_itoa(int num)
 	return (res);
 }
 
-#include <stdio.h>
-
-int	main(void)
-{
-	int	num = 123456;
-	char	*res;
-
-	res = ft_itoa(num);
-	printf("res: %s\n", res);
-}
+// #include <stdio.h>
+// 
+// int	main(void)
+// {
+// 	printf("res: %s\n", ft_itoa(INT_MAX));
+// 	printf("res: %s\n", ft_itoa(INT_MIN));
+// 	printf("res: %s\n", ft_itoa(0));
+// 	printf("res: %s\n", ft_itoa(1));
+// 	printf("res: %s\n", ft_itoa(-1));
+// }
