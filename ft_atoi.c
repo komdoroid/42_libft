@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 10:31:14 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/26 11:07:36 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/26 13:37:07 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ int	ft_atoi(const char *str)
 	return (m * res);
 }
 
-#include <stdlib.h>
-#include <stdio.h>
+// #include <stdlib.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char	str[] = "     +2147483649";
+// int	main(void)
+// {
+// 	char	str[] = "     +2147483649";
 
-	printf("ft_atoi : %d\n", ft_atoi(str));
-	printf("atoi : %d\n", atoi(str));
-}
+// 	printf("ft_atoi : %d\n", ft_atoi(str));
+// 	printf("atoi : %d\n", atoi(str));
+// }

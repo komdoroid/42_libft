@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 19:06:13 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/25 19:55:14 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/26 14:52:19 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*res;
+	char			*res;
 	unsigned int	i;
 	unsigned int	len;
 
@@ -35,14 +35,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 
 // #include <stdio.h>
-// 
+//
 // char	to_upper_even(unsigned int num, char c)
 // {
 // 	if (num % 2 == 0 && c >= 'a' && c <= 'z')
 // 		return (c - 'a' + 'A');
 // 	return (c);
 // }
-// 
+//
 // int	main(void)
 // {
 // 	char const	str[] = "Hello, 42tokyo!";

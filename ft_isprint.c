@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 22:05:51 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/25 08:10:03 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/26 14:50:23 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,14 @@ int	ft_isprint(int c)
 	return (1);
 }
 
-
 // #include <stdio.h>
 // #include <ctype.h>
-// 
+//
 // int	main(void)
 // {
 // 	// char	c = '\t';
 // 	char	c = 'A';
-// 
+//
 // 	printf("ft_isprint: %d\n", ft_isprint(c));
 // 	printf("isprint: %d\n", isprint(c));
 // }

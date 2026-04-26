@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 17:40:50 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/25 18:45:59 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/26 14:46:47 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,26 +106,26 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-int	main(void)
-{
-	char	s[] = "as;ldhflkask;jio ;a;lskaaa";
-	char	c;
-	char	**res;
-	int		i;
-	int		j;
-
-	c = 'a';
-	res = ft_split(s, c);
-	i = 0;
-	while (res[i] != NULL)
-	{
-		j = 0;
-		while (res[i][j] != '\0')
-		{
-			write(1, &res[i][j], 1);
-			j++;
-		}
-		write(1, "\n", 1);
-		i++;
-	}
-}
+// int	main(void)
+// {
+// 	char	s[] = "as;ldhflkask;jio ;a;lskaaa";
+// 	char	c;
+// 	char	**res;
+// 	int		i;
+// 	int		j;
+// 
+// 	c = 'a';
+// 	res = ft_split(s, c);
+// 	i = 0;
+// 	while (res[i] != NULL)
+// 	{
+// 		j = 0;
+// 		while (res[i][j] != '\0')
+// 		{
+// 			write(1, &res[i][j], 1);
+// 			j++;
+// 		}
+// 		write(1, "\n", 1);
+// 		i++;
+// 	}
+// }

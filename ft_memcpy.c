@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 07:22:52 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/25 07:32:57 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/26 14:52:58 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	unsigned char	*d;
+	size_t				i;
+	unsigned char		*d;
 	const unsigned char	*s;
 
 	d = (unsigned char *)dest;
@@ -31,13 +31,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 // #include <string.h>
 // #include <stdio.h>
-// 
+//
 // int	main(void)
 // {
 // 	char	dest1[] = "bbbbb";
 // 	char	dest2[] = "bbbbb";
 // 	char	src[] = "aaaaa";
-// 
+//
 // 	memcpy(dest1, src, 3);
 // 	ft_memcpy(dest2, src, 3);
 // 	printf("dest1: %s\n", dest1);

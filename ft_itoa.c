@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 18:56:30 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/25 19:03:21 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/26 14:49:56 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_nbrlen(long nb)
+static int	ft_nbrlen(long nb)
 {
 	int	len;
 
@@ -51,7 +51,7 @@ static void	ft_fillnbr(char *res, long nb, int len)
 char	*ft_itoa(int num)
 {
 	long	nb;
-	int	len;
+	int		len;
 	char	*res;
 
 	nb = (long)num;
@@ -64,7 +64,7 @@ char	*ft_itoa(int num)
 }
 
 // #include <stdio.h>
-// 
+//
 // int	main(void)
 // {
 // 	printf("res: %s\n", ft_itoa(INT_MAX));
