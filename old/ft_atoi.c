@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 10:31:14 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/26 20:02:56 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/26 18:43:13 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,51 +21,38 @@ static int	isspace(int c)
 	return (0);
 }
 
-static int	calc_result(const char *str, int i, int sign)
-{
-	long	res;
-
-	res = 0;
-	while ('0' <= str[i] && str[i] <= '9')
-	{
-		if (res > (LONG_MAX - (str[i] - '0')) / 10)
-		{
-			if (sign == 1)
-				return ((int)LONG_MAX);
-			else
-				return ((int)LONG_MIN);
-		}
-		res = res * 10 + (str[i] - '0');
-		i++;
-	}
-	return ((int)sign * res);
-}
-
 int	ft_atoi(const char *str)
 {
 	int	i;
-	int	sign;
+	int	m;
+	int	res;
 
 	i = 0;
-	sign = 1;
+	m = 1;
 	while (isspace(str[i]))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-			sign = -1;
+			m *= -1;
 		i++;
 	}
-	return (calc_result(str, i, sign));
+	res = 0;
+	while ('0' <= str[i] && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - '0');
+		i++;
+	}
+	return (m * res);
 }
 
 // #include <stdlib.h>
 // #include <stdio.h>
-//
+// 
 // int	main(void)
 // {
-// 	char	str[] = "     +123456789012345";
-//
+// 	char	str[] = "     +123456789012345678901234567890";
+// 
 // 	printf("ft_atoi : %d\n", ft_atoi(str));
 // 	printf("atoi : %d\n", atoi(str));
 // }

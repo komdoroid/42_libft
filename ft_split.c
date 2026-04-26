@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 17:40:50 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/26 14:46:47 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/26 17:29:41 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,20 +68,11 @@ static char	*make_word(char const *s, size_t start, char c)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static bool	make_res(char **res, char const *s, char c)
 {
-	char	**res;
-	size_t	words;
 	size_t	i;
 	size_t	j;
-	size_t	start;
 
-	if (s == NULL)
-		return (NULL);
-	words = count_words(s, c);
-	res = (char **)malloc(sizeof(char *) * (words + 1));
-	if (res == NULL)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i] != '\0')
@@ -90,19 +81,34 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] != '\0')
 		{
-			start = i;
-			res[j] = make_word(s, start, c);
+			res[j] = make_word(s, i, c);
 			if (res[j] == NULL)
 			{
 				free_split(res, j);
-				return (NULL);
+				return (false);
 			}
 			j++;
 			while (s[i] != c && s[i] != '\0')
 				i++;
 		}
 	}
-	res[j] = NULL;
+	return (true);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	int		num_words;
+
+	num_words = count_words(s, c);
+	if (s == NULL)
+		return (NULL);
+	res = (char **)malloc(sizeof(char *) * (num_words + 1));
+	if (res == NULL)
+		return (NULL);
+	if (!make_res(res, s, c))
+		return (NULL);
+	res[num_words] = NULL;
 	return (res);
 }
 
