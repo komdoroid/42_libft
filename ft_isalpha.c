@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 21:30:01 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/23 22:29:53 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/25 08:08:56 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int	ft_isalpha(int c)
 {
 	if ('A' <= c && c <= 'Z')
-		return (c);
+		return (1);
 	else if ('a' <= c && c <= 'z')
-		return (c);
+		return (1);
 	return (0);
 }
 

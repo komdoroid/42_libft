@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 21:53:44 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/23 22:15:37 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/25 08:09:30 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int	ft_isalnum(int c)
 {
 	if ('0' <= c && c <= '9')
-		return (c);
+		return (1);
 	else if ('A' <= c && c <= 'Z')
-		return (c);
+		return (1);
 	else if ('a' <= c && c <= 'z')
-		return (c);
+		return (1);
 	return (0);
 }
 

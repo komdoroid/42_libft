@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 09:38:36 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/26 14:53:51 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t				i;
 	const unsigned char	*str1;
 	const unsigned char	*str2;
 
@@ -20,14 +32,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-#include <stdio.h>
-
-int	main(void)
-{
-	char	s1[] = "12345";
-	char	s2[] = "12345";
-	int	res;
-
-	res = ft_memcmp(s1, s2, 7);
-	printf("res: %d\n", res);
-}
+// #include <stdio.h>
+// #include <string.h>
+//
+// int	main(void)
+// {
+// 	char	s1[] = "12345";
+// 	char	s2[] = "12345";
+//
+// 	printf("res: %d\n", ft_memcmp(s1, s2, 5));
+// 	printf("res: %d\n", memcmp(s1, s2, 5));
+// }

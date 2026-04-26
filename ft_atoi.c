@@ -1,6 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 10:31:14 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/26 13:37:07 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_atoi(char *str)
+static int	isspace(int c)
+{
+	if (9 <= c && c <= 13)
+		return (1);
+	else if (c == ' ')
+		return (1);
+	return (0);
+}
+
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	m;
@@ -8,9 +29,9 @@ int	ft_atoi(char *str)
 
 	i = 0;
 	m = 1;
-	while (ft_isspace(str[i]))
+	while (isspace(str[i]))
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 			m *= -1;
@@ -22,5 +43,16 @@ int	ft_atoi(char *str)
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	return (res);
+	return (m * res);
 }
+
+// #include <stdlib.h>
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	char	str[] = "     +2147483649";
+
+// 	printf("ft_atoi : %d\n", ft_atoi(str));
+// 	printf("atoi : %d\n", atoi(str));
+// }

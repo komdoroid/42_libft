@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 07:33:13 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/26 13:10:25 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	unsigned char	*d;
+	size_t				i;
+	unsigned char		*d;
 	const unsigned char	*s;
 
 	d = (unsigned char)dest;
@@ -17,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
-	else 
+	else
 	{
 		i = n;
 		{
@@ -34,7 +46,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // 	unsigned char	*tmp;
 // 	unsigned char	*d;
 // 	const unsigned char	*s;
-// 
+//
 // 	d = (unsigned char *)dest;
 // 	s = (const unsigned char *)src;
 // 	i = 0;
@@ -55,14 +67,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // 	free(tmp);
 // 	return (dest);
 // }
-// 
+//
 // #include <stdio.h>
-// 
+//
 // int	main(void)
 // {
 // 	char	dest[] = "12345";
 // 	char	src[] = "67890";
-// 
+//
 // 	ft_memmove(dest, src, 3);
 // 	printf("dest: %s\n", dest);
 // }

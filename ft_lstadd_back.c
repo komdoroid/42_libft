@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/26 09:59:05 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/26 10:03:22 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
@@ -33,17 +45,17 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // 
 // int	main(void)
 // {
-// 	t_list	*head;
+// 	t_list	*head = NULL;
 // 
-// 	head = NULL;
 // 	t_list	*node1 = ft_lstnew("A");
 // 	t_list	*node2 = ft_lstnew("B");
 // 	t_list	*node3 = ft_lstnew("C");
 // 
 // 	ft_lstadd_back(&head, node1);
+// 	print_list(head);
 // 	ft_lstadd_back(&head, node2);
+// 	print_list(head);
 // 	ft_lstadd_back(&head, node3);
-// 
 // 	print_list(head);
 // 
 // 	return(0);

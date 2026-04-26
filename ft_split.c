@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 17:40:50 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/26 14:46:47 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	count_words(char const *s, char c)
@@ -9,12 +21,12 @@ static size_t	count_words(char const *s, char c)
 	count = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c)
+		while (s[i] != '\0' && s[i] == c)
 			i++;
-		if (s[i] != c)
+		if (s[i] != '\0')
 		{
 			count++;
-			while (s[i] != c && s[i] != '\0')
+			while (s[i] != '\0' && s[i] != c)
 				i++;
 		}
 	}
@@ -59,6 +71,10 @@ static char	*make_word(char const *s, size_t start, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
+	size_t	words;
+	size_t	i;
+	size_t	j;
+	size_t	start;
 
 	if (s == NULL)
 		return (NULL);
@@ -70,11 +86,12 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c && s[i] != '\0')
+		while (s[i] != '\0' && s[i] == c)
 			i++;
 		if (s[i] != '\0')
 		{
-			res[j] = make_word(s, i, c);
+			start = i;
+			res[j] = make_word(s, start, c);
 			if (res[j] == NULL)
 			{
 				free_split(res, j);
@@ -89,26 +106,26 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-int	main(void)
-{
-	char	s[] = "as;ldhflkask;jio ;a;lskjio";
-	char	c = 'a';
-	char	**res;
-	int	i;
-	int	j;
-
-	res = ft_split(s, c);
-	i = 0;
-	while (res[i] != NULL)
-	{
-		j = 0;
-		while (res[i][j] != '\0')
-		{
-			write(1, &res[i][j], 1);
-			j++;
-		}
-		write(1, "\n", 1);
-		i++;
-	}
-}
-
+// int	main(void)
+// {
+// 	char	s[] = "as;ldhflkask;jio ;a;lskaaa";
+// 	char	c;
+// 	char	**res;
+// 	int		i;
+// 	int		j;
+// 
+// 	c = 'a';
+// 	res = ft_split(s, c);
+// 	i = 0;
+// 	while (res[i] != NULL)
+// 	{
+// 		j = 0;
+// 		while (res[i][j] != '\0')
+// 		{
+// 			write(1, &res[i][j], 1);
+// 			j++;
+// 		}
+// 		write(1, "\n", 1);
+// 		i++;
+// 	}
+// }

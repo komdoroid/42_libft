@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 10:50:49 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/26 14:54:33 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -5,7 +17,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 	size_t	total;
 
-	if (size != 0 && nmemb > (size_t)-1/ size)
+	ptr = NULL;
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	if (size != 0 && nmemb > sizeof(size_t) - 1 / size)
 		return (NULL);
 	total = nmemb * size;
 	ptr = malloc(total);
@@ -16,7 +31,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 
 // #include <stdio.h>
-// 
+//
 // int	main(void)
 // {
 // 	size_t	nmemb = 10;
@@ -24,7 +39,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 	size_t	i = 0;
 // 	void	*res;
 // 	unsigned char	*p;
-// 
+//
 // 	res = ft_calloc(nmemb, size);
 // 	p = (unsigned char *)res;
 // 	while (i < nmemb * size)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/26 10:05:13 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/26 10:29:36 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
@@ -29,7 +41,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // 
 // int	main(void)
 // {
-// 	int	i;
 // 	char	source1[] = "Hello ";
 // 	char	source2[] = "World !";
 // 
@@ -39,24 +50,14 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // 	char	*str2 = (char *)malloc(10);
 // 	if (!str2)
 // 		return (1);
-// 	i = 0;
-// 	while (source1[i] != '\0')
-// 	{
-// 		str1[i] = source1[i];
-// 		i++;
-// 	}
-// 	i = 0;
-// 	while (source2[i] != '\0')
-// 	{
-// 		str2[i] = source2[i];
-// 		i++;
-// 	}
+// 	ft_strlcpy(str1, source1, ft_strlen(source1));
+// 	ft_strlcpy(str2, source2, ft_strlen(source2));
+// 
 // 	t_list	*head = ft_lstnew((void *)str1);
 // 	t_list	*node1 = ft_lstnew((void *)str2);
 // 
 // 	ft_lstadd_back(&head, node1);
 // 	print_list(head);
-// 	ft_lstdelone(head, del_content);
-// 	print_list(head);
+// 	ft_lstdelone(head->next, del_content);
+// 	// print_list(head);
 // }
-// 

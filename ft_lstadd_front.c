@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/26 09:37:33 by kkomurat          #+#    #+#             */
+/*   Updated: 2026/04/26 09:56:40 by kkomurat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
@@ -15,14 +27,14 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 	while (lst)
 // 	{
 // 		printf("%s -> ", (char *)lst->content);
-// 		lst = lst -> next;
+// 		lst = lst->next;
 // 	}
 // 	printf("NULL\n");
 // }
 // 
 // int	main(void)
 // {
-// 	t_list	*head;
+// 	t_list	*head = NULL;
 // 
 // 	t_list	*node1 = ft_lstnew("A");
 // 	t_list	*node2 = ft_lstnew("B");
