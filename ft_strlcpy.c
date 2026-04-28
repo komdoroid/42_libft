@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 07:35:48 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/25 08:22:54 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/04/28 21:03:15 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // 
 // 	printf("ft_strlcpy : %zu\n", ft_strlcpy(dst1, src, size));
 // 	printf("dst1 : %s\n", dst1);
-// 	printf("ft_strlcpy : %zu\n", strlcpy(dst2, src, size));
+// 	printf("strlcpy : %zu\n", strlcpy(dst2, src, size));
 // 	printf("dst2 : %s\n", dst2);
 // }
