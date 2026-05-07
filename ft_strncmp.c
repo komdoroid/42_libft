@@ -6,20 +6,20 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 09:09:25 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/25 09:38:21 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/05/07 20:47:39 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t size)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if (size == 0)
+	if (n == 0)
 		return (0);
-	while (i < size)
+	while (i < n)
 	{
 		if (str1[i] != str2[i])
 			return ((unsigned char)str1[i] - (unsigned char)str2[i]);

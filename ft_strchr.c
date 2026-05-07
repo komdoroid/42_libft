@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 08:50:25 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/29 15:05:47 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/05/07 21:54:47 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while (*str != '\0')
+	while (*s != '\0')
 	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
-	if (*str == (char)c)
-		return ((char *)str);
+	if (*s == (char)c)
+		return ((char *)s);
 	return (NULL);
 }
 
 // #include <unistd.h>
 // #include <string.h>
-// 
+//
 // int	main(void)
 // {
 // 	char	*str = "42tokyo";
 // 	char	*res;
-// 
+//
 // 	res = ft_strchr(str, 'o');
 // 	while (*res != '\0')
 // 	{

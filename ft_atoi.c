@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 10:31:14 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/26 20:02:56 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/05/07 22:02:46 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,22 @@ static int	calc_result(const char *str, int i, int sign)
 	return ((int)sign * res);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
 
 	i = 0;
 	sign = 1;
-	while (isspace(str[i]))
+	while (isspace(nptr[i]))
 		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			sign = -1;
 		i++;
 	}
-	return (calc_result(str, i, sign));
+	return (calc_result(nptr, i, sign));
 }
 
 // #include <stdlib.h>

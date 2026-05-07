@@ -6,17 +6,18 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 14:14:47 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/26 14:14:49 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/05/07 22:22:38 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <limits.h>
 # include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
+# include <limits.h>
 
 typedef struct s_list
 {

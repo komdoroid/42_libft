@@ -3,42 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkomurat <kkomurat@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 09:01:38 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/25 09:08:53 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/05/07 21:54:09 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 	int	last;
 
 	i = 0;
 	last = -1;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		if (str[i] == (char)c)
+		if (s[i] == (char)c)
 			last = i;
 		i++;
 	}
-	if (str[i] == (char)c)
+	if (s[i] == (char)c)
 		last = i;
 	if (last == -1)
 		return (NULL);
-	return ((char *)(str + last));
+	return ((char *)(s + last));
 }
 
 // #include <unistd.h>
-// 
+//
 // int	main(void)
 // {
 // 	char	*str = "42tokyo";
 // 	char	*res;
-// 
+//
 // 	res = ft_strrchr(str, 'o');
 // 	while (*res != '\0')
 // 	{
