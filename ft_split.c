@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 17:40:50 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/26 17:29:41 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/05/08 20:53:18 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,9 +100,9 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		num_words;
 
-	num_words = count_words(s, c);
 	if (s == NULL)
 		return (NULL);
+	num_words = count_words(s, c);
 	res = (char **)malloc(sizeof(char *) * (num_words + 1));
 	if (res == NULL)
 		return (NULL);
