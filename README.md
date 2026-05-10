@@ -81,7 +81,7 @@ And include the header in your source files:
 | `ft_putendl_fd` | Outputs a string followed by newline to a file descriptor |
 | `ft_putnbr_fd` | Outputs an integer to a file descriptor |
 
-### Part3 — Linked List Functions
+### Part 3 — Linked List Functions
 
 | Function | Description |
 |---|---|

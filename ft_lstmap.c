@@ -6,7 +6,7 @@
 /*   By: kkomurat <kkomurat@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 10:42:07 by kkomurat          #+#    #+#             */
-/*   Updated: 2026/04/26 17:49:38 by kkomurat         ###   ########.fr       */
+/*   Updated: 2026/05/10 16:42:20 by kkomurat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			return (NULL);
 		}
 		content = f(lst->content);
-		if (content == NULL)
-		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
-		}
 		create_new_node(&new_list, node, content);
 		lst = lst->next;
 	}

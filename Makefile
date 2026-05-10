@@ -6,7 +6,7 @@
 #    By: kkomurat <kkomurat@student.42.jp>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/09 12:11:05 by kkomurat          #+#    #+#              #
-#    Updated: 2026/05/09 12:16:52 by kkomurat         ###   ########.fr        #
+#    Updated: 2026/05/10 16:12:54 by kkomurat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,13 +50,15 @@ SRCS = ft_isalpha.c \
        ft_putstr_fd.c \
        ft_putendl_fd.c \
        ft_putnbr_fd.c \
-	   ft_lstnew.c \
-	   ft_lstadd_front.c \
-	   ft_lstsize.c \
-	   ft_lstdelone.c \
-	   ft_lstclear.c \
-	   ft_lstiter.c \
-	   ft_lstmap.c
+       ft_lstnew.c \
+       ft_lstadd_front.c \
+       ft_lstsize.c \
+       ft_lstlast.c \
+       ft_lstadd_back.c \
+       ft_lstdelone.c \
+       ft_lstclear.c \
+       ft_lstiter.c \
+       ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
 
